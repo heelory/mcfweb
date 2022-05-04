@@ -1,0 +1,1270 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.slider, .slider1, .slider2, .slider3{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.bgimage{
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: zoom-out 3s linear infinite;
+}
+@keyframes zoom-out {
+    100%{
+        width: 100%;
+    }
+}
+.txt{
+    width: 600px;
+    position: absolute;
+    color: white;
+    top: 200px;
+    left: 100px;
+    animation: text 12s linear infinite;
+    transform: translateY(100px);
+}
+.txt h1{
+    margin-bottom: 40px;
+}
+.txt p{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 80px;
+}
+.line{
+    background-color: red;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+}
+.slider{
+    animation: slide 12s linear infinite;
+}
+.slider1{
+    animation: slide1 12s linear infinite;
+}
+.slider2{
+    animation: slide2 12s linear infinite;
+}
+.slider3{
+    animation: slide3 12s linear infinite;
+}
+@keyframes slide {
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+@keyframes slide1 {
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes slide2 {
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes slide3 {
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+@keyframes text {
+    10%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.text{
+    animation-delay: 0s;
+}
+.text1{
+    animation-delay: 3s;
+}
+.text2{
+    animation-delay: 6s;
+}
+.text3{
+    animation-delay: 9s;
+}
+
+    /* ----------navigation bar syntax------------ */
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(197, 196, 196, 0.088);
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.weblogo{
+    height: 9vh;
+    margin: 15px 10px;
+    margin-left: 40px;
+}
+
+.nav-bar ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+.nav-bar ul li{
+    width: 120px;
+    font-weight: 500;
+    margin: 35px 5px;
+}
+
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar a:hover{
+    border: 2px rgba(4, 4, 158, 0.527) solid;
+    padding: 10px 15px;
+    border-radius: 50px;
+    animation: border 12s linear infinite;
+}
+
+.sub-menu{
+    display: none;
+}
+
+.nav-bar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.nav-bar ul li:hover .sub-menu  ul{
+    display: block;
+    margin: 10px;
+}
+
+.nav-bar ul li:hover .sub-menu  ul li{
+    width: 150px;
+    margin: 25px;
+    padding: 0px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.nav-bar ul li:hover .sub-menu  ul li:last-child{
+    border-bottom: none;
+}
+
+.menu-list i{
+    color: white;
+    padding-right: 10px;
+}
+
+
+#icon i {
+    display: none;
+} 
+/* --------------End of Navigation Bar Styles---------------- */
+
+/* -------------Upcoming Programs styles--------------- */
+
+.programs{
+    background-color:  bisque !important;
+    width: 75%;
+    height: 20vh;
+    position: absolute;
+    margin-top: 32em;
+    margin-left: 12.5%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.dates{
+    background-color: #90651b;
+    display: flex;
+    flex-direction: column;
+    width: 5em;
+    margin-top: 3%;
+}
+.day{
+    color: white;
+    font-size: 45px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 4px;
+}
+.month{
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.program-txt{
+    margin-top: 4%;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    line-height: 25px;
+}
+.program-dates, .location{
+    display: flex;
+    font-size: 11px;
+    font-style: italic;
+}
+.fa-map-marker, .fa-calendar{
+    margin-right: 10px;
+    margin-top: 6px;
+}
+.time-fluid{
+    display: flex;
+    margin-top: 4%;
+}
+.day-fluid span, .hour-fluid span, .minutes-fluid span, .seconds-fluid span{
+    font-size: 40px;
+    padding-right: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.day-fluid p, .hour-fluid p, .minutes-fluid p, .seconds-fluid p{
+    font-size: 17px;
+    padding-right: 30px;
+    color: gray;
+}
+.lines{
+    height: 15vh;
+    color: red;
+    width: 5px;
+}
+/* -------------End Of Next program style--------------- */
+
+/* ---------------welcoming message--------------------- */
+.welcome-fluid{
+    margin-top: 45em; 
+    text-align: center;
+}
+.welcome-fluid h1{
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0.5em;
+}
+.welcome-fluid p{
+    font-size: 18px;
+}
+/* ----------------end------------------------- */
+
+/* -----------------mid-text-message------------- */
+.mid--txt {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image, .image1, .image2, .image3{
+    position: relative;
+    width: 300px;
+    margin-left: 1em;
+}
+.image__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.image__img1, .image__img2, .image__img3{
+    width: 300px;
+    height: 100%;
+
+}
+.image__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+.image__overlay:hover{
+    opacity: 1;
+}
+.image__overlay:hover > * {
+    transform: translateY(0px);
+}
+.image__title{
+    font-size: 2em;
+    font-weight: bold;
+}
+.image__description{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+/* ------------------end------------------------ */
+
+/* ------------------Articles------------------- */
+
+.article-fluid{
+    margin-top: 6em;
+}
+.head-text h1{
+    font-size: 60px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.head-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.article1{
+    padding: 0px 20px;
+}
+.article1 h1 {
+    font-size: 25px;
+    font-style: italic;
+    padding-top: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.article1 p{
+    font-size: 17px;
+    padding-top: 10px;
+}
+.fa-commenting{
+    margin: 10px 0px;
+}
+.fa-commenting:hover{
+    color: grey;
+}
+.article1 span{
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 1.5em;
+    color: grey;
+}
+
+.more-article, .more-article a{
+    text-transform: uppercase;
+    text-align: center;
+    color: grey;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5rem;
+}
+/* -------------end---------------------- */
+/* ----------getinvolved---------------- */
+.get-involve{
+    margin-top: 6rem;
+    background-color: rgb(230, 227, 227);
+    min-height: 80vh;
+}
+.get-header{
+    text-align: center;
+    padding-top: 5rem;
+}
+.get-header p{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.get-header h2{
+    font-size: 40px;
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+.get-image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 6em;
+}
+.get-image1 {
+    position: relative;
+    width: 300px;
+    margin-left: 1em;
+    margin-top: 1rem;
+}
+.pic1{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.image-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.image-text > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+.image-text:hover{
+    opacity: 1;
+}
+.image-text:hover > * {
+    transform: translateY(0px);
+}
+.image-text h1{
+    font-size: 2em;
+    font-weight: bold;
+}
+.image-text p{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+/* --------------end--------------- */
+/* --------------textSlider-------- */
+.textslider{
+    margin-top: 3em;
+    font-family: sans-serif;
+    background-color: rgba(197, 197, 197, 0.3);
+    min-height: 30vh;
+}
+.bibleslides{
+    color: white;
+    position: relative;
+    text-align: center;
+    transform: translate(0%,50%);
+    background-color: #90651b;
+    height: 20vh;
+    padding: 0px 5px;
+    overflow: hidden;
+}
+.bibleslider1{
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    padding-top: 12.5px;
+}
+.bibleslider1:first-child{
+    animation: anime 12s infinite;
+}
+@keyframes anime {
+    0%{
+        margin-top: 0;
+    }
+    16%{
+        margin-top: -20vh;
+    }
+    33%{
+        margin-top: -40vh;
+    }
+    50%{
+        margin-top: -60vh;
+    }
+    66%{
+        margin-top: -40vh;
+    }
+    82%{
+        margin-top: -20vh;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+.spans{
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/* --------------End------------------ */
+/* -----------------faq--------------- */
+
+.faq-fluid{
+    background-image: url(images/index.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 70vh;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+}
+.question-fluid, .give-fluid{
+    background-color: transparent !important;
+    width: 50%;
+    text-align: center;
+}
+.question-fluid h1, .give-fluid h1{
+    font-size: 60px;
+    color: #fff;
+    padding-top: 25%;
+}
+.question-fluid p, .give-fluid p{
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 5rem;
+}
+.question-fluid a, .give-fluid  a{
+    border: 2px solid white;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 15px;
+}
+/* ------------------end---------------- */
+/* ------------------contact------------ */
+.contact{
+    margin-top: 3em;
+    display: flex;
+    background-color: rgba(197, 197, 197, 0.3);
+    min-height: 40vh;
+    justify-content: space-evenly;
+}
+.phone-fluid, 
+.office-fluid, 
+.email-fluid{
+    width: 33%;
+    background-color: #fff;
+    text-align: center;
+}
+#phonee{
+    font-size: 50px;
+    color: grey;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    border-color: black;
+}
+#envelopee{
+    font-size: 30px;
+    padding: 10px 20px;
+}
+.article-txt{
+    font-size: 20px;
+    color: navy;
+}
+/* -------------end--------------- */
+/* ----------contact2-------------- */
+
+.contact2{
+    margin-top: 3em;
+    background-color: #90651b;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.newsletter, .searchin, .social-links{
+    width: 33%;
+    margin-top: 3em;
+    text-align: center;
+}
+.newsletter span{
+    font-size: 2em;
+    color: #fff;
+}
+.search input{
+    padding: 1.5em 4.25em;
+    text-align: center;
+}
+    
+.social-links i{
+    font-size: 25px;
+    color: #fff;
+    padding-right: 1em;
+    margin-top: 0.7em;
+}
+.social-links i:hover{
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: white;
+    color: #90651b;
+}
+/* ------------end---------------- */
+/* ---------------footer---------- */
+.footer{
+    display: flex;
+    background-color: grey;
+    min-height: 75vh;
+}
+.about-in-footer, 
+.new-here, 
+.ministeries-in-footer, 
+.main-menu-footer{
+    width: 25%;
+    margin-top: 3em;
+    text-align: center;
+    color: white;
+}
+.about-title{
+    font-size: 30px;
+    font-weight: 400;
+    padding-bottom: 1em;
+}
+.about-txt{
+    line-height: 25px;
+    margin-bottom: 5em; 
+}
+.give-in-footer{
+    border: 2px solid white;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 15px;
+    transition: 0.7s;
+}
+.give-in-footer:hover{
+    background-color: white;
+    color: gray;
+}
+.new-here li, 
+.ministeries-in-footer li, 
+.main-menu-footer li{
+    list-style: none;
+    line-height: 30px;
+}
+.n-h-title,
+.ministery-title,
+.menu-title{
+    font-size: 30px;
+    font-weight: 400;
+    padding-bottom: 1em;
+}
+.menu-list a,
+.ministeries-in-footer a,
+.new-here a{
+    text-decoration: none;
+    color: white;
+}
+.copyright{
+    background-color: rgb(77, 77, 77);
+    text-align: center;
+    color: rgb(179, 179, 179);
+    min-height: 10vh;
+}
+.copyright p{
+    padding-top: 1.5rem;
+}
+
+
+
+
+
+/* -------------------Media Query ----------------- */
+@media (max-width: 1200px){
+    .nav-bar ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2f3640;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        transition: all 0.5s;
+    }
+
+    #icon i {
+        display: block;
+        font-size: 35px;
+        margin-top: 30px;
+        margin-right: 30px;
+        color: white;
+    } 
+    
+    .nav-bar ul.show{
+        left: 0;
+    }
+
+    .programs{
+        background-color:  bisque !important;
+        width: 75%;
+        height: 20vh;
+        position: absolute;
+        margin-top: 38em;
+        margin-left: 12.5%;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    
+    .welcome-fluid{
+        margin-top: 51.5em; 
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px){
+    .nav-bar ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2f3640;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        transition: all 0.5s;
+    }
+
+    #icon i {
+        display: block;
+        font-size: 35px;
+        margin-top: 30px;
+        margin-right: 30px;
+        color: white;
+    }  
+
+    .nav-bar ul.show{
+        left: 0;
+    }
+
+    .slider, .slider1, .slider2, .slider3{
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .bgimage{
+        width: 120%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: zoom-out 5s linear infinite;
+    }
+    @keyframes zoom-out {
+        120%{
+            width: 120%;
+        }
+    }
+   
+}
+
+@media (max-width: 768px){
+    .nav-bar ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2f3640;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        transition: all 0.5s;
+    }
+
+    #icon i {
+        display: block;
+        font-size: 35px;
+        margin-top: 40px;
+        margin-right: 40px;
+        color: white;
+    }  
+
+    .nav-bar ul.show{
+        left: 0;
+    }
+
+    .slider, .slider1, .slider2, .slider3{
+        height: 100vh;
+        width: 130%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .bgimage{
+        width: 120%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: zoom-out 5s linear infinite;
+    }
+    @keyframes zoom-out {
+        130%{
+            width: 130%;
+        }
+    }
+    .programs{
+        background-color:  bisque !important;
+        width: 80%;
+        height: 20vh;
+        position: absolute;
+        margin-top: 38em;
+        margin-left: 12%;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .dates{
+        background-color: #90651b;
+        display: flex;
+        flex-direction: column;
+        width: 5em;
+        margin-top: 3.5%;
+    }
+    .day{
+        color: white;
+        font-size: 40px;
+        font-family: sans-serif;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+    .month{
+        color: white;
+        font-size: 19px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 3px;
+    }
+    .program-txt{
+        margin-top: 4%;
+        color: black;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 500;
+        line-height: 25px;
+    }
+    .program-dates, .location{
+        display: flex;
+        font-size: 11px;
+        font-style: italic;
+    }
+    .fa-map-marker, .fa-calendar{
+        margin-right: 10px;
+        margin-top: 6px;
+    }
+    .time-fluid{
+        display: flex;
+        margin-top: 4%;
+    }
+    .day-fluid span, .hour-fluid span, .minutes-fluid span, .seconds-fluid span{
+        font-size: 40px;
+        padding-right: 30px;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+    .day-fluid p, .hour-fluid p, .minutes-fluid p, .seconds-fluid p{
+        font-size: 17px;
+        padding-right: 30px;
+        color: gray;
+    }
+    .lines{
+        height: 15vh;
+        color: red;
+        width: 5px;
+    }
+    .textslider{
+        margin-top: 3em;
+        font-family: sans-serif;
+        background-color: rgba(197, 197, 197, 0.3);
+        min-height: 25vh;
+    }
+    .bibleslides{
+        color: white;
+        position: relative;
+        text-align: center;
+        transform: translate(0%,50%);
+        background-color: #90651b;
+        height: 18vh;
+        padding: 0px 5px;
+        overflow: hidden;
+    }
+    .bibleslider1{
+        text-align: center;
+        font-size: 20px;
+        line-height: 40px;
+        padding-top: 12.5px;
+    }
+    .bibleslider1:first-child{
+        animation: anime 12s infinite;
+    }
+    @keyframes anime {
+        0%{
+            margin-top: 0;
+        }
+        16%{
+            margin-top: -17vh;
+        }
+        33%{
+            margin-top: -34vh;
+        }
+        50%{
+            margin-top: -51vh;
+        }
+        66%{
+            margin-top: -34vh;
+        }
+        82%{
+            margin-top: -17vh;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+    .spans{
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .faq-fluid{
+        background-image: url(images/index.jpg);
+        background-position: center;
+        background-size: cover;
+        min-height: 80vh;
+        margin-top: 10em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .question-fluid, .give-fluid{
+        background-color: transparent !important;
+        text-align: center;
+    }
+    .question-fluid h1, .give-fluid h1{
+        font-size: 45px;
+        color: #fff;
+        padding-top: 15%;
+    }
+    .question-fluid p, .give-fluid p{
+        font-size: 20px;
+        font-style: italic;
+        color: white;
+        line-height: 27px;
+        margin-top: 20px;
+        margin-bottom: 2.5rem;
+    }
+    .question-fluid a, .give-fluid  a{
+        border: 2px solid white;
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 15px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        background-color: grey;
+        min-height: 75vh;
+    }
+    .about-in-footer, 
+    .new-here, 
+    .ministeries-in-footer, 
+    .main-menu-footer{
+        width: 100%;
+        margin-top: 3em;
+        text-align: center;
+        color: white;
+    }
+    .about-title{
+        font-size: 30px;
+        font-weight: 400;
+        padding-bottom: 1em;
+    }
+    .about-txt{
+        line-height: 25px;
+        margin-bottom: 5em; 
+    }
+    .give-in-footer{
+        border: 2px solid white;
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 15px;
+        transition: 0.7s;
+    }
+    .give-in-footer:hover{
+        background-color: white;
+        color: gray;
+    }
+    .new-here li, 
+    .ministeries-in-footer li, 
+    .main-menu-footer li{
+        list-style: none;
+        line-height: 30px;
+    }
+    .n-h-title,
+    .ministery-title,
+    .menu-title{
+        font-size: 30px;
+        font-weight: 400;
+        padding-bottom: 1em;
+    }
+    .menu-list1 a,
+    .ministeries-in-footer a,
+    .new-here a{
+        text-decoration: none;
+        color: white;
+    }
+    .copyright{
+        background-color: rgb(77, 77, 77);
+        text-align: center;
+        color: rgb(179, 179, 179);
+        min-height: 10vh;
+    }
+    .copyright p{
+        padding-top: 1.5rem;
+    }
+}
+
+@media (max-width: 520px){
+    .nav-bar ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2f3640;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        transition: all 0.5s;
+    }
+
+    #icon i {
+        display: block;
+        font-size: 35px;
+        margin-top: 40px;
+        margin-right: 40px;
+        color: white;
+    }  
+
+    .nav-bar ul.show{
+        left: 0;
+    }
+
+    .slider, .slider1, .slider2, .slider3{
+        height: 75vh;
+        width: 150%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .bgimage{
+        width: 120%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: zoom-out 5s linear infinite;
+    }
+    @keyframes zoom-out {
+        130%{
+            width: 130%;
+        }
+    } 
+    .programs{
+        background-color:  bisque !important;
+        width: 100%;
+        height: 30vh;
+        position: absolute;
+        margin-top: 32em;
+        margin-left: 12.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .dates{
+        background-color: #90651b;
+        display: flex;
+        flex-direction: column;
+        width: 5em;
+        margin-top: 3%;
+    }
+    .day{
+        color: white;
+        font-size: 45px;
+        font-family: sans-serif;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+    .month{
+        color: white;
+        font-size: 21px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 3px;
+    }
+    .program-txt{
+        margin-top: 4%;
+        color: black;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 500;
+        line-height: 25px;
+        display: flex;
+    }
+    .program-dates, .location{
+        display: flex;
+        flex-direction: column;
+        font-size: 11px;
+        font-style: italic;
+    }
+    .fa-map-marker, .fa-calendar{
+        margin-right: 10px;
+        margin-top: 6px;
+    }
+    .time-fluid{
+        display: flex;
+        margin-top: 4%;
+        justify-content: center;
+    }
+    .day-fluid span, .hour-fluid span, .minutes-fluid span, .seconds-fluid span{
+        font-size: 40px;
+        padding-right: 30px;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+    .day-fluid p, .hour-fluid p, .minutes-fluid p, .seconds-fluid p{
+        font-size: 17px;
+        padding-right: 30px;
+        color: gray;
+    }
+    .lines{
+        height: 15vh;
+        color: red;
+        width: 5px;
+    }
+    .bibleslides{
+        color: white;
+        position: relative;
+        text-align: center;
+        transform: translate(0%,50%);
+        background-color: #90651b;
+        height: 16vh;
+        padding: 0px 5px;
+        overflow: hidden;
+    }
+    .bibleslider1{
+        text-align: center;
+        font-size: 16px;
+        line-height: 40px;
+        padding-top: 12.5px;
+    }
+    .bibleslider1:first-child{
+        animation: anime 12s infinite;
+    }
+    @keyframes anime {
+        0%{
+            margin-top: 0;
+        }
+        16%{
+            margin-top: -17vh;
+        }
+        33%{
+            margin-top: -34vh;
+        }
+        50%{
+            margin-top: -51vh;
+        }
+        66%{
+            margin-top: -34vh;
+        }
+        82%{
+            margin-top: -17vh;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+}
